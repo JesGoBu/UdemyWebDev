@@ -1,76 +1,165 @@
-<!doctype html> <html>
+<!DOCTYPE html>
+<html>
 <head>
-    <title>My First Website</title>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <meta name="description" content="A jouney of a thousand miles begins with a
-single step." />
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
 
-</head>  
-<body> 
-      <a name="namedTop"></a>
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
 
-<meta charset="utf-8" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<h1>My First Website</h1>
-<p>This is some content which I want to appear on<br />two lines.</p>
-   
-          <p>This is a second paragraph with a neat horizontal ruled line
-underneath.</p>
-<hr>
-      <p>This paragraph has some fancy <strong>bold</strong>, <em>italic</em>,
-<u>underlined</u> and <strike>struck through</strike> text.</p>
-      <p>This is an unordered list of my favourite foods:</p>
-      <ul>
-            <li>Tangerines</li>
-            <li>Rocky Road Ice Cream</li>
-            <li>Pizza</li>
-      </ul>
-      <p>This is an ordered list of the tallest trees in the world:</p>
-      <ol>
-            <li>Coast Redwood</li>
-            <li>Coast Douglas-fir </li>
-            <li>Eucalyptus regnans</li>
-      </ol>
-<hr>
-      <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.png/2560px-A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.png" width=300>Wish you were here?</p>
-<hr>
-   
-    <table>
-      <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
-      <tr><td>Rob</td><td>33</td><td>Male</td></tr>
-      <tr><td>Kirsten</td><td>34</td><td>Female</td></tr>
-      <tr><td>Tom</td><td>3</td><td>Male</td></tr>
-</table>
-<hr>
-<input type="text" placeholder="Type something here..." />
-<br />
-<textarea>Longer text goes here...</textarea>
-<br />
-<select>
-      <option>Choose an option...</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-</select>
-<br>
-<input type="checkbox" /> Click me!
-   
-    <br>
-      <input type="radio" name="options" /> Option 1
-<br>
-      <input type="radio" name="options" /> Option 2
-<br>
-      <input type="submit" value="Click Me!">
-<hr>
-      <a href="http://www.google.com">Click me to go to Google</a>
-<br>
-      <a href="#namedTop">Click me to go to the top of the page</a>
-      
-      <table>
-      <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
-      </table>
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
 </body>
 </html>
-   
+
